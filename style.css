@@ -6,28 +6,43 @@
 
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .container {
     text-align: center;
-    background: white;
-    padding: 60px 80px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
     border-radius: 20px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     color: #667eea;
     margin-bottom: 20px;
 }
 
-p {
-    font-size: 1.2rem;
+#game-container {
+    margin: 20px auto;
+    border: 3px solid #667eea;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+#game-container canvas {
+    display: block;
+}
+
+.controls {
+    font-size: 1rem;
     color: #666;
+    margin-top: 15px;
+    font-style: italic;
 }
