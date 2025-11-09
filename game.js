@@ -61,9 +61,6 @@ function create() {
     this.physics.add.overlap(projectiles, enemies, hitEnemy, null, this);
     this.physics.add.overlap(player, gems, collectGem, null, this);
     this.physics.add.overlap(player, enemies, hitPlayer, null, this);
-
-    // Store scene reference for use in other functions
-    this.game.scene = this;
 }
 
 function update(time, delta) {
