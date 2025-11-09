@@ -32,6 +32,7 @@ const ENEMY_SPAWN_COOLDOWN = 2000; // 2 seconds
 const PLAYER_SPEED = 200;
 const ENEMY_SPEED = 100;
 const PROJECTILE_SPEED = 300;
+const WEAPON_RANGE = 250; // Only fire at enemies within this distance
 const GEM_MAGNET_RADIUS = 100;
 const GEM_MAGNET_SPEED = 200;
 
@@ -174,8 +175,8 @@ function fireProjectile(scene) {
         }
     });
 
-    // Only fire if there's an enemy to target
-    if (closestEnemy) {
+    // Only fire if there's an enemy within range
+    if (closestEnemy && closestDistance <= WEAPON_RANGE) {
         const projectile = scene.add.text(player.x, player.y, '🔪', { fontSize: '24px' });
         scene.physics.add.existing(projectile);
         projectile.body.setSize(24, 24);
